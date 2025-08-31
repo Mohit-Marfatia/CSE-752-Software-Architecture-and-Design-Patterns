@@ -8,8 +8,8 @@ public class MainAbstractFactory {
         ExamFactory[] factories = {new GATEExamFactory(), new JEEExamFactory()};
         
         String[][] responses = {
-            { "Gate-MCQ", "Gate-FILLIN", "Gate-ESSAY", "Gate-TRUEFALSE" },
-            { "JEE-MCQ", "JEE-FILLIN", "JEE-ESSAY", "JEE-TRUEFALSE" }
+            { "Gate-MCQ", "Gate-FILLIN", "Gate-ESSAY", "Gate-TRUEFALSE", "Gate-CODING" },
+            { "JEE-MCQ", "JEE-FILLIN", "JEE-ESSAY", "JEE-TRUEFALSE", "JEE-CODING" }
         };
 
         for (int i = 0; i < factories.length; i++) {
@@ -18,6 +18,7 @@ public class MainAbstractFactory {
             factory.createFillInEvaluator().evaluate(responses[i][1]);
             factory.createEssayEvaluator().evaluate(responses[i][2]);
             factory.createTrueFalseEvaluator().evaluate(responses[i][3]);
+            factory.createCodingEvaluator().evaluate(responses[i][4]);
         }
     }
 }

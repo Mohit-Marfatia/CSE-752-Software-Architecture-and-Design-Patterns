@@ -15,4 +15,7 @@ public class GATEExamFactory implements ExamFactory{
     public TrueFalseEvaluator createTrueFalseEvaluator(){
         return new GATE_truefalse_eval();
     }
+    public CodingEvaluator createCodingEvaluator(){
+        return new GATE_coding_eval();
+    }
 }

@@ -5,4 +5,5 @@ public interface ExamFactory {
     FillInEvaluator createFillInEvaluator();
     EssayEvaluator createEssayEvaluator();
     TrueFalseEvaluator createTrueFalseEvaluator();
+    CodingEvaluator createCodingEvaluator();
 }

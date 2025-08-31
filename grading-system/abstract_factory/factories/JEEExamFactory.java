@@ -15,4 +15,7 @@ public class JEEExamFactory implements ExamFactory{
     public TrueFalseEvaluator createTrueFalseEvaluator(){
         return new JEE_truefalse_eval();
     }
+    public CodingEvaluator createCodingEvaluator(){
+        return new JEE_coding_eval();
+    }
 }
