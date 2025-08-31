@@ -1,5 +1,5 @@
-package jee;
-import interfaces.QuestionEvaluator;
+package factory_method.jee;
+import factory_method.interfaces.QuestionEvaluator;
 
 public class JEE_essay_eval implements QuestionEvaluator {
     public void evaluate(String response) {

@@ -1,6 +1,6 @@
-package factories;
-import interfaces.*;
-import gate.*;
+package factory_method.factories;
+import factory_method.interfaces.*;
+import factory_method.gate.*;
 
 public class GATEFactory implements QuestionEvaluatorFactory {
     public QuestionEvaluator createEvaluator(String questionType) {

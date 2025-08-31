@@ -1,5 +1,6 @@
-import interfaces.*;
-import factories.*;
+package factory_method;
+import factory_method.interfaces.*;
+import factory_method.factories.*;
 
 public class MainFactoryMethod {
     public static void main(String[] args) {

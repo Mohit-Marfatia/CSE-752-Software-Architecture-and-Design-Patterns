@@ -1,6 +1,6 @@
-package factories;
-import interfaces.*;
-import jee.*;
+package factory_method.factories;
+import factory_method.interfaces.*;
+import factory_method.jee.*;
 
 public class JEEFactory implements QuestionEvaluatorFactory {
     public QuestionEvaluator createEvaluator(String questionType) {

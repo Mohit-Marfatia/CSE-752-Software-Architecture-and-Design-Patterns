@@ -1,5 +1,5 @@
-package gate;
-import interfaces.QuestionEvaluator;
+package factory_method.gate;
+import factory_method.interfaces.QuestionEvaluator;
 
 public class GATE_fillin_eval implements QuestionEvaluator {
     public void evaluate(String response) {
