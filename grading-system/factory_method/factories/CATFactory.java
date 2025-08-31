@@ -3,18 +3,29 @@ import factory_method.interfaces.*;
 import factory_method.cat.*;
 
 public class CATFactory implements QuestionEvaluatorFactory {
-    public QuestionEvaluator createEvaluator(String questionType) {
+    public QuestionEvaluator createEvaluator(String questionType, String difficulty) { 
+        QuestionEvaluator evaluator;
         switch (questionType) {
-            case "MCQ": 
-                return new CAT_mcq_eval();
-            case "FILLIN": 
-                return new CAT_fillin_eval();
+            case "MCQ":
+                evaluator = new CAT_mcq_eval();
+                break;
+            case "FILLIN":
+                evaluator = new CAT_fillin_eval();
+                break;
             case "ESSAY":
-                return new CAT_essay_eval();
+                evaluator = new CAT_essay_eval();
+                break;
             case "TRUEFALSE":
-                return new CAT_truefalse_eval();
+                evaluator = new CAT_truefalse_eval();
+                break;
+            case "CODING":  
+                evaluator = new CAT_coding_eval();
+                break;
             default:
-                throw new IllegalArgumentException("Invalid question type");
+                throw new IllegalArgumentException("Invalid question type: " + questionType);
         }
+        
+        System.out.println("Setting difficulty: " + difficulty + " for CAT " + questionType);
+        return evaluator;
     }
 }

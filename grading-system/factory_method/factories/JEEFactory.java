@@ -3,21 +3,29 @@ import factory_method.interfaces.*;
 import factory_method.jee.*;
 
 public class JEEFactory implements QuestionEvaluatorFactory {
-    public QuestionEvaluator createEvaluator(String questionType) {
+    public QuestionEvaluator createEvaluator(String questionType, String difficulty) {
+        QuestionEvaluator evaluator;
         switch (questionType) {
             case "MCQ":
-                return new JEE_mcq_eval();
+                evaluator = new JEE_mcq_eval();
+                break;
             case "FILLIN":
-                return new JEE_fillin_eval();
+                evaluator = new JEE_fillin_eval();
+                break;
             case "ESSAY":
-                return new JEE_essay_eval();
+                evaluator = new JEE_essay_eval();
+                break;
             case "TRUEFALSE":
-                return new JEE_truefalse_eval();
-            case "CODING":
-                return new JEE_coding_eval();
+                evaluator = new JEE_truefalse_eval();
+                break;
+            case "CODING":  
+                evaluator = new JEE_coding_eval();
+                break;
             default:
                 throw new IllegalArgumentException("Invalid question type: " + questionType);
         }
+        
+        System.out.println("Setting difficulty: " + difficulty + " for JEE " + questionType);
+        return evaluator;
     }
-    
 }
