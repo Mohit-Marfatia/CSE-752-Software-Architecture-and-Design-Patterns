@@ -1,9 +1,9 @@
 package abstract_factory.interfaces;
 
 public interface ExamFactory {
-    MCQEvaluator createMCQEvaluator();
-    FillInEvaluator createFillInEvaluator();
-    EssayEvaluator createEssayEvaluator();
-    TrueFalseEvaluator createTrueFalseEvaluator();
-    CodingEvaluator createCodingEvaluator();
+    MCQEvaluator createMCQEvaluator(String difficulty); 
+    FillInEvaluator createFillInEvaluator(String difficulty); 
+    EssayEvaluator createEssayEvaluator(String difficulty); 
+    TrueFalseEvaluator createTrueFalseEvaluator(String difficulty);
+    CodingEvaluator createCodingEvaluator(String difficulty); 
 }

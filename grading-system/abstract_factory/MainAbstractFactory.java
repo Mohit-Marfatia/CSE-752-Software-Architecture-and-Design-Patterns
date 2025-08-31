@@ -6,6 +6,7 @@ import abstract_factory.factories.*;
 public class MainAbstractFactory {
     public static void main(String[] args) {
         ExamFactory[] factories = {new GATEExamFactory(), new JEEExamFactory(), new CATExamFactory()};
+        String[] difficulties = {"Easy", "Medium", "Hard", "Expert", "Advanced"};
         
         String[][] responses = {
             { "Gate-MCQ", "Gate-FILLIN", "Gate-ESSAY", "Gate-TRUEFALSE", "Gate-CODING" },
@@ -15,11 +16,11 @@ public class MainAbstractFactory {
 
         for (int i = 0; i < factories.length; i++) {
             ExamFactory factory = factories[i];
-            factory.createMCQEvaluator().evaluate(responses[i][0]);
-            factory.createFillInEvaluator().evaluate(responses[i][1]);
-            factory.createEssayEvaluator().evaluate(responses[i][2]);
-            factory.createTrueFalseEvaluator().evaluate(responses[i][3]);
-            factory.createCodingEvaluator().evaluate(responses[i][4]);
+            factory.createMCQEvaluator(difficulties[0]).evaluate(responses[i][0]); 
+            factory.createFillInEvaluator(difficulties[1]).evaluate(responses[i][1]); 
+            factory.createEssayEvaluator(difficulties[2]).evaluate(responses[i][2]); 
+            factory.createTrueFalseEvaluator(difficulties[3]).evaluate(responses[i][3]);
+            factory.createCodingEvaluator(difficulties[4]).evaluate(responses[i][4]); 
         }
     }
 }
