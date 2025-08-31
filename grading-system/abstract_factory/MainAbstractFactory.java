@@ -5,11 +5,12 @@ import abstract_factory.factories.*;
 
 public class MainAbstractFactory {
     public static void main(String[] args) {
-        ExamFactory[] factories = {new GATEExamFactory(), new JEEExamFactory()};
+        ExamFactory[] factories = {new GATEExamFactory(), new JEEExamFactory(), new CATExamFactory()};
         
         String[][] responses = {
             { "Gate-MCQ", "Gate-FILLIN", "Gate-ESSAY", "Gate-TRUEFALSE", "Gate-CODING" },
-            { "JEE-MCQ", "JEE-FILLIN", "JEE-ESSAY", "JEE-TRUEFALSE", "JEE-CODING" }
+            { "JEE-MCQ", "JEE-FILLIN", "JEE-ESSAY", "JEE-TRUEFALSE", "JEE-CODING" },
+            { "CAT-MCQ", "CAT-FILLIN", "CAT-ESSAY", "CAT-TRUEFALSE", "CAT-CODING" }
         };
 
         for (int i = 0; i < factories.length; i++) {
