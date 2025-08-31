@@ -13,6 +13,8 @@ public class JEEFactory implements QuestionEvaluatorFactory {
                 return new JEE_essay_eval();
             case "TRUEFALSE":
                 return new JEE_truefalse_eval();
+            case "CODING":
+                return new JEE_coding_eval();
             default:
                 throw new IllegalArgumentException("Invalid question type: " + questionType);
         }

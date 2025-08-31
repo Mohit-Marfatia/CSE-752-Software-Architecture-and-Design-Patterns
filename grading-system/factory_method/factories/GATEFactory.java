@@ -13,6 +13,8 @@ public class GATEFactory implements QuestionEvaluatorFactory {
                 return new GATE_essay_eval();
             case "TRUEFALSE":
                 return new GATE_truefalse_eval();
+            case "CODING":
+                return new GATE_coding_eval();
             default:
                 throw new IllegalArgumentException("Invalid question type: " + questionType);
         }
